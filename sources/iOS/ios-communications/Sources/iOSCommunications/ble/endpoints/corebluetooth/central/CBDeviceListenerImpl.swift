@@ -293,9 +293,13 @@ public class CBDeviceListenerImpl: NSObject, SDKCBCentralManagerDelegate {
         }
     }
     
-    public func centralManager(_ central: CBCentralManager, connectionEventDidOccur event: CBConnectionEvent, for peripheral: CBPeripheral) {
-        // handle if needed
-    }
+     #if compiler(>=6.0)                                                                                                                                                                               
+     // This method was removed in iOS 26 SDK                                                                                                                                                          
+     #else                                                                                                                                                                                             
+     public func centralManager(_ central: CBCentralManager, connectionEventDidOccur event: CBConnectionEvent, for peripheral: CBPeripheral) {                                                         
+         // handle if needed                                                                                                                                                                           
+     }                                                                                                                                                                                                 
+     #endif
 }
 
 extension CBDeviceListenerImpl: CBScanningProtocol {
