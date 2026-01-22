@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "PolarBleSdk",
   platforms: [                                                                                                                                                                                      
-      .iOS(.v14), .watchOS(.v5), .macOS(.v10_15)                                                                                                                                                    
+      .iOS(.v14), .watchOS(.v5), .macOS(.v11)                                                                                                                                                 
   ],  
     products: [
         .library( name: "PolarBleSdk", targets: ["PolarBleSdk"]),
